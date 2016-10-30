@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 global._config = require('./config.js');
 
