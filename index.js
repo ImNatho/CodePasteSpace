@@ -10,6 +10,6 @@ db.init(_config.db, function(connection) {
 
 var app = express();
 
-var server = app.listen(8080, function() {
+var server = app.listen(_config.port, function() {
     console.log('Web server started');
 });
