@@ -1,0 +1,19 @@
+{
+    "name": "codepastespace",
+    "version": "0.0.1",
+    "description": "A dockerized code sharing site designed for developers.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SpectacularSoftware/CodePasteSpace.git"
+    },
+    "author": "Spectacular Software",
+    "license": "GNU",
+    "bugs": {
+        "url": "https://github.com/SpectacularSoftware/CodePasteSpace/issues"
+    },
+    "homepage": "https://codepaste.space"
+}
