@@ -12,7 +12,7 @@ var Paste = new Schema({
             browser: String,
             version: String
         }
-    }
+    },
     meta: {
         created_on: { type: Date, default: Date.now },
         updated_at: { type: Date, default: Date.now }
