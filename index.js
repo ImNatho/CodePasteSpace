@@ -10,6 +10,10 @@ db.init(_config.db, function(connection) {
 });
 
 
+var app = express();  /* Create app instance */
+app.use('/', require('./routes'));  /* Route all traffic to routing scripts */
+
+
 app.listen(_config.port, function() {  /* Initialize the web service and log */
     console.log('Web server started');
 });
