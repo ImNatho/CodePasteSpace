@@ -32,6 +32,6 @@ app.use('/static', express.static(__dirname + '/static'));
 /* Route all traffic to routing scripts */
 app.use('/', require('./routes'));
 
-app.listen(_config.port, function() {  /* Initialize the web service and log */
+app.listen(_config.port || 8080, function() {  /* Initialize the web service and log */
     console.log('Web server started');
 });
