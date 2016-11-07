@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+
 module.exports = {
     init: function(uri, callback) {
         /* Set promise library to nodejs default */
