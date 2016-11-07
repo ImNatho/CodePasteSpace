@@ -6,7 +6,7 @@ global._utils = require('./utils');
 
 
 var db = require('./db');  /* Get db scripts and init db connection */
-db.init(process.env.MONGO || require('./config').db, function(connection) {
+db.init(process.env.MONGO, function(connection) {
     console.log('Database connection ready!')
 });
 

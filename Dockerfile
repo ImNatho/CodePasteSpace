@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . /var/app
 
-CMD nodemon
+CMD node index.js
