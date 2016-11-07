@@ -9,4 +9,4 @@ RUN npm install
 COPY . /var/apps/codepastespace
 COPY config.default.js /var/apps/codepastespace/config.js
 
-CMD ['nodemon', 'index.js']
+CMD nodemon
