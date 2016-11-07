@@ -13,6 +13,10 @@ var Paste = new Schema({
             version: String
         }
     },
+    removed: {
+        removed: { type: Boolean, default: false },
+        remove_reason: String
+    },
     meta: {
         created_on: { type: Date, default: Date.now },
         updated_at: { type: Date, default: Date.now }
