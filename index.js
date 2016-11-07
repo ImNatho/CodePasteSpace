@@ -23,9 +23,11 @@ app.set('layout', 'layout');
 app.enable('view cache');
 app.engine('html', require('hogan-express'));
 
+/* Static routing - production will use nginx to access file directly. */
+app.use('/static', express.static(__dirname + '/static'));
+
 /* Route all traffic to routing scripts */
 app.use('/', require('./routes'));
-
 
 app.listen(_config.port, function() {  /* Initialize the web service and log */
     console.log('Web server started');

@@ -1,0 +1,14 @@
+<a href="/"><img class="logo" src="/static/assets/logo.png"></a>
+<div class="container">
+    {{>error}}
+    <form method="POST" action="/">
+        <textarea class="paste-textarea" name="paste" maxlength="10000" autofocus>{{ data }}</textarea>
+        <div class="input-block">
+            <input class="creator-input" name="creator" type="text" maxlength="24" placeholder="Your Name (Optional)">
+            <input class="paste-button" type="submit" value="Paste">
+        </div>
+    </form>
+</div>
+<footer>
+    <p>Maximum Paste Length is 10,000 Characters | &copy <script>document.write(getFooterYear());</script> CodePasteSpace - All Rights Reserved</p>
+</footer>

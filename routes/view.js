@@ -4,14 +4,13 @@ var Router = require('express').Router({mergeParams: true});
 Router.use(function(req, res, next) {
     Paste.find({ key: req.params.key }).limit(1).exec(function(err, data) {
         if(data.length != 1) {
-            res.status(404);
-            res.send('There was no paste found with the ID of "' + req.params.key + '"!');
+            res.status(404).render('404');
             return;
         }
 
         var paste = data[0];
         if(paste.removed.removed) {
-            res.status(410);
+            res.status(410).render('410');
             res.send('Paste has been removed by an administrator. Reason: ' + paste.removed.reason);
             return;
         }
