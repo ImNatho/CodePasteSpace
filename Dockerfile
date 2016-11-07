@@ -1,12 +1,12 @@
 FROM node:argon
 
-RUN mkdir -p /var/apps/codepastespace
-WORKDIR /var/apps/codepastespace
+RUN mkdir -p /var/app
+WORKDIR /var/app
 
-COPY package.json /var/apps/codepastespace
+COPY package.json /var/app
 RUN npm install
 
-COPY . /var/apps/codepastespace
-COPY config.default.js /var/apps/codepastespace/config.js
+COPY . /var/app
+COPY config.default.js /var/app/config.js
 
-CMD nodemon
+CMD npm start
