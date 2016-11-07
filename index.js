@@ -12,6 +12,10 @@ db.init(_config.db, function(connection) {
 
 const app = express();  /* Create express app instance */
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 /* Set .html extension for templates */
 app.set('view engine', 'html');
 /* Use layout.html as the default layout */
