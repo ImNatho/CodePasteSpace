@@ -7,6 +7,5 @@ COPY package.json /var/app
 RUN npm install
 
 COPY . /var/app
-COPY config.default.js /var/app/config.js
 
-CMD npm start
+CMD nodemon

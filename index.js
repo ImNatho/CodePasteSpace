@@ -6,7 +6,7 @@ global._utils = require('./utils');
 
 
 var db = require('./db');  /* Get db scripts and init db connection */
-db.init(_config.db, function(connection) {
+db.init(process.env.MONGO || require('./config').db, function(connection) {
     console.log('Database connection ready!')
 });
 
@@ -32,6 +32,6 @@ app.use('/static', express.static(__dirname + '/static'));
 /* Route all traffic to routing scripts */
 app.use('/', require('./routes'));
 
-app.listen(_config.port || 8080, function() {  /* Initialize the web service and log */
+app.listen(process.env.PORT || 8080, function() {  /* Initialize the web service and log */
     console.log('Web server started');
 });
