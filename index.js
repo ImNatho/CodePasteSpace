@@ -1,7 +1,6 @@
 'use strict';
 
 var express = require('express');
-global._config = require('./config');  /* Define config as global variable */
 global._utils = require('./utils');
 
 
