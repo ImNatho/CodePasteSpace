@@ -23,4 +23,9 @@ var Paste = new Schema({
     }
 });
 
+Paste.pre('save', function(next) {
+    this.meta.updated = new Date();
+    next();
+});
+
 module.exports = mongoose.model('Paste', Paste);

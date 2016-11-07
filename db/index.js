@@ -9,7 +9,7 @@ module.exports = {
         mongoose.connect(uri);
         mongoose.connection.once('open', function() {
             /* Store paste model in global vars */
-            global.Paste = this.Paste;
+            global.Paste = require('./paste');
 
             /* Callback to init origin */
             callback(mongoose.connection);
