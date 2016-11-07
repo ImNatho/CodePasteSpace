@@ -16,6 +16,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(require('express-useragent').express())
+
 /* Set .html extension for templates */
 app.set('view engine', 'html');
 /* Use layout.html as the default layout */
