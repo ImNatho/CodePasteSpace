@@ -1,7 +1,8 @@
 'use strict';
 
 var express = require('express');
-global._config = require('./config.js');  /* Define config as global variable */
+global._config = require('./config');  /* Define config as global variable */
+global._utils = require('./utils');
 
 
 var db = require('./db');  /* Get db scripts and init db connection */
